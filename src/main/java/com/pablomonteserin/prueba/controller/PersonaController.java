@@ -29,10 +29,6 @@ public class PersonaController {
 
     @GetMapping
     public List<Persona> selectPeople() {
-        Persona p = new Persona();
-        p.setName("Hasd");
-        p.setAge(32);
-        invitadoRepository.save(p);
         List<Persona> people = invitadoRepository.findAll();
         return people;
     }
